@@ -16,8 +16,9 @@
 ## 開発技術
 ### 活用した技術
 #### API・データ
-* 
-* 
+* BlueMix Personality Insight
+* BlueMix Node-Red, NodeJS platform
+* NTT-communications Skyway (speech recognition)
 
 #### フレームワーク・ライブラリ・モジュール
 * 
