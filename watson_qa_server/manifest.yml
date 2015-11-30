@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: jphacks2015-tk22-watsonQA
+  host: jphacks2015-tk22-watsonqa
+  disk_quota: 1024M
+  services:
+  - jphacks2015-tk22-watsonQA-DataCache
+  - jphacks2015-tk22-watsonQA-Dialog
