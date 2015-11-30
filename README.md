@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+# skyway
+
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.12.1.
+
+## Build & development
+
+Run `grunt` for building and `grunt serve` for preview.
+
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
+=======
 # サンプル（プロダクト名）
 ## 製品概要
 音声入力、人工知能、性格分析技術により、
@@ -35,3 +49,4 @@
 #### ハッカソンで開発した独自機能・技術
 * 独自で開発したものの内容をこちらに記載してください
 * 特に力を入れた部分をファイルリンク、またはcommit_idを記載してください。
+>>>>>>> bdeb0e2d8a464d92a7ae6947ba5fb63c931f3513

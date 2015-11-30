@@ -1,0 +1,46 @@
+<div class="jumbotron">
+  <div class="row marketing">
+    <img src="images/cloud.png" id="cloud1"style="z-index:-1;position:absolute;top:70%;width:120px;height:70px;left:1300px;"></img><img src="images/cloud.png" id="cloud2"style="z-index:-1;position:absolute;top:10%;width:120px;height:70px;left:600px;"></img><img src="images/cloud.png" id="cloud3"style="z-index:-1;position:absolute;top:33%;width:120px;height:70px;left:130px;"></img><img src="images/cloud.png" id="cloud4"style="z-index:-1;position:absolute;top:40%;width:120px;height:70px;left:900px;"></img><img src="images/cloud.png" id="cloud5"style="z-index:-1;position:absolute;top:50%;width:120px;height:70px;left:1100px;"></img>
+
+
+    <div id="chat" style="">
+  <ul id="messages">
+    <li ng-repeat="userMessage in userMessageList">
+      <div id="message"><div id="me"><p>{{userMessage}}</p></div></div>
+    </li>
+    </ul>
+  <input stype="text" id="eom"></input>
+
+</div>
+
+    </div>
+      <div id="webcamcontrols" style="position:absolute;bottom:3%;left:2%;">
+        <h3 style="color:#FF2200;position:absolute;top:-5%;right:1%" id="recording">.Rec</h3>
+        <video autoplay  width="320" height="240" controls style="border-radius:10px;"></video><br>
+        <button class="recordbutton" onclick="startRecording();"style="position:absolute;left:41%">RECORD</button>
+    </div>
+
+
+<div id="qD">
+<p id="q"style="cursor:default;text-shadow: 0px 0px 5px DarkGreen;font-family:'Comic Sans MS',  monospace,cursive, sans-serif,'Courier New';font-size:150%;color:#22f613;"></p>
+<form method="post" action="php/mail.php" style="position:relative;left:52px;">
+<img src="images/mic.jpg" style="height:15px;position:absolute;top:3%;right:3%;border-radius:7px;" id="mic"></img>
+
+<textarea name="answer" id="answer" placeholder="Please say something......."style="border-radius:10px;font-family:monospace,cursive, sans-serif,'Courier New';font-size:110%;color:brown;" ng-model="message">
+</textarea><br>
+
+
+<input type="button" style="border-radius:10px;font-family:'Comic Sans MS',monospace;background-color:#F1F1FF;position:relative;left:40%;"ng-click="addMessage(message)"/>
+
+<p> {{userMessageList}}</p>
+<button type="btn btn-default" ng-click="showList()">showlist</button>
+</form></div>
+  <footer>&copy; 2015, JPHacks </footer>
+    <div id="beta">
+      Recruit<br></small> 
+
+    <button class="btn btn-default" ng-click="start()">start</button>
+    <button class="btn btn-default" ng-click="stop()">stop</button>
+  </div>
+</div>
+ 

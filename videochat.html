@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://skyway.io/dist/0.3/peer.min.js"></script>
+  <script src="https://skyway.io/dist/multiparty.min.js"></script>
+  
+  <style> video { width:200px; } </style>
+
+</head>
+<body>
+
+  <div id="streams"></div>
+
+<script>
+
+  // MultiParty インスタンスを生成
+  multiparty = new MultiParty( {
+    "key": "********-****-****-****-************"  /* SkyWay keyを指定 */
+  });
+
+  multiparty.on('my_ms', function(video) {
+    // 自分のvideoを表示
+    var vNode = MultiParty.util.createVideoNode(video);
+    $(vNode).appendTo("#streams");
+  }).on('peer_ms', function(video) {
+    // peerのvideoを表示
+    var vNode = MultiParty.util.createVideoNode(video);
+    $(vNode).appendTo("#streams");
+  }).on('ms_close', function(peer_id) {
+    // peerが切れたら、対象のvideoノードを削除する
+    $("#"+peer_id).remove();
+  });
+
+</script>
+</body>
+</html>
